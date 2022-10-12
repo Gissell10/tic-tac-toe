@@ -25,7 +25,7 @@ let currentPlayer = koala;
 
 
 board.addEventListener('click', afterClick);
-
+restartElement.addEventListener('click', restart);
 function afterClick(e) {
 
     let boardPositionClickled = [...board.children].indexOf(e.target);  // return a position on the array
@@ -53,11 +53,25 @@ function endGame(draw) {
         winnerText.innerHTML = `${currentPlayer} Wins!`
     }
     theWinner.classList.add('show');
-}
+} 
 function isDraw(){
     if(boardCellValue.indexOf(null)=== -1){
         return true;
     }
+
+}
+function restart () {
+    restartData();
+        for(let i = 0; i< boardCellValue.length; i++){
+            let element = boxElements.item(i);
+            element.classList.remove(kangaroo)
+            element.classList.remove(koala)
+        }
+    theWinner.classList.remove('show');
+}
+function restartData(){
+    boardCellValue = [null,null,null,null,null,null,null,null,null];
+    currentPlayer = koala;
 }
 
 function swapTurns(){
