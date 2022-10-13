@@ -13,7 +13,6 @@ const winPosition = [
 ]
 
 
-
 let boxElements = document.querySelectorAll('.box');
 let board = document.getElementById('game');
 let player1 = document.getElementById('player1');
@@ -27,7 +26,10 @@ let currentPlayer = koala;
 board.addEventListener('click', afterClick);
 restartElement.addEventListener('click', restart);
 function afterClick(e) {
-
+   
+    if(!e.target.classList.contains('box')){
+        return;                          //is valid it the element that target is the box
+    }
     let boardPositionClickled = [...board.children].indexOf(e.target);  // return a position on the array
     placeplayerBoard(currentPlayer, boardPositionClickled);
     drawing();
@@ -51,9 +53,16 @@ function endGame(draw) {
         winnerText.innerHTML = 'Draw!'
     }else{
         winnerText.innerHTML = `${currentPlayer} Wins!`
+        // winplusOne();   // to add one to the winner 
     }
     theWinner.classList.add('show');
 } 
+
+// function winplusOne(){
+//     player1.innerText  += 1;
+//     console.log(player1)
+// }
+
 function isDraw(){
     if(boardCellValue.indexOf(null)=== -1){
         return true;
