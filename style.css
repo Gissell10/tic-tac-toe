@@ -1,190 +1,175 @@
 /*  ==============     GOOGLE FONTS        ===============    */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    background-color: rgb(30, 30, 30);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgb(30, 30, 30);
 }
 
-.container{
-    background-color: rgb(30, 30, 30);
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Press Start 2P', cursive;
+.container {
+  background-color: rgb(30, 30, 30);
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  font-family: "Press Start 2P", cursive;
 }
 /*  ==============     header        ===============    */
-header{
-    padding: 40px;
-    font-size: 40px;
-    color: #FEF2BF;
+header {
+  padding: 40px;
+  font-size: 40px;
+  color: #fef2bf;
 }
 header h1 {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 h2 {
-    color: #FEF2BF;
+  color: #fef2bf;
 }
 /*  ==============     main        ===============    */
-button{
-    padding: 10px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
-    color: #FEF2BF;
-    background-color: rgb(63, 63, 86);
+button {
+  padding: 10px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: #fef2bf;
+  background-color: rgb(63, 63, 86);
+  border-radius: 10%;
 }
-button:hover{
-    background-color: #FEF2BF;
-    color: rgb(63, 63, 86);
+button:hover {
+  background-color: #fef2bf;
+  color: rgb(63, 63, 86);
 }
-.game{
-    max-width: 600px;
-    width: 90%;
-    aspect-ratio: 1 / 1;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 0 auto;
-    margin-bottom: 100px;
+.game {
+  max-width: 600px;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
-.players{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 100px;
+.players {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
 
 .box {
-    border: 3px dotted white;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  border: 3px dotted white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .box.kangaroo,
-.box.koala{
-    cursor: not-allowed;
-    pointer-events: none;
+.box.koala {
+  cursor: not-allowed;
+  pointer-events: none;
 }
 .box:first-child,
 .box:nth-child(2),
-.box:nth-child(3){
-    border-top: none;
+.box:nth-child(3) {
+  border-top: none;
 }
-.box:nth-child(3n + 1){
-    border-left: none;
+.box:nth-child(3n + 1) {
+  border-left: none;
 }
 
-.box:nth-child(3n + 3){
-    border-right: none;
+.box:nth-child(3n + 3) {
+  border-right: none;
 }
 .box:last-child,
 .box:nth-child(8),
-.box:nth-child(7){
-    border-bottom: none;
+.box:nth-child(7) {
+  border-bottom: none;
 }
 
-.kangaroo::after{
-    background-image :url(./img/kangaroo.png);
-    background-size: cover;
-    display: block;
-    width: 90%;
-    height: 90%;
-    content:'';
-    animation: scale-in-center 0.3s ease-out both;
+.kangaroo::after {
+  background-image: url(./img/kangaroo.png);
+  background-size: cover;
+  display: block;
+  width: 90%;
+  height: 90%;
+  content: "";
+  animation: scale-in-center 0.3s ease-out both;
 }
 
 .koala::after {
-    background-image :url(./img/koala.png);
-    background-size: cover;
-    display: block;
-    width: 90%;
-    height: 90%;
-    content:'';
-    animation: scale-in-center 0.3s ease-out both;
+  background-image: url(./img/koala.png);
+  background-size: cover;
+  display: block;
+  width: 90%;
+  height: 90%;
+  content: "";
+  animation: scale-in-center 0.3s ease-out both;
 }
-.winner{
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgb(233, 234, 179, 0.7);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.winner {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(233, 234, 179, 0.7);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#winnerText{
-    font-family: 'Roboto';
-    color: rgb(238, 238, 244);
-    font-size: 30px;
-    margin-bottom: 20px;
-    padding: 10px;
+#winnerText {
+  font-family: "Roboto";
+  color: rgb(238, 238, 244);
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
-.winner.show{
-    display: flex;
+.winner.show {
+  display: flex;
+}
+.reset {
+  margin-bottom: 50px;
 }
 /*  ==============     footer        ===============    */
-span{
-    color:#FEF2BF
+span {
+  color: #fef2bf;
 }
 
 /* For small devicecs */
-@media screen and (max-width: 320px){
-    header{
-        padding: 10px;
-        margin: 20px 0;
-    }
-    header h1 {
-        font-size: 20px;
-    }
-    .players{
-        margin-bottom: 40px;
-    }
-} 
-
-@media screen and (max-width: 576px){
-    header{
-        padding: 10px;
-        margin: 30px 0;    
-    }
-    header h1 {
-        font-size: 30px; 
-    }
-    h2{
-        font-size: 15px ;
-    }
-    .players{
-        margin-bottom: 50px;
-    }
-   
+@media screen and (max-width: 320px) {
+  header {
+    padding: 10px;
+    margin: 20px 0;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  .players {
+    margin-bottom: 40px;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 576px) {
+  header {
+    padding: 10px;
+    margin: 30px 0;
+  }
+  header h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  .players {
+    margin-bottom: 50px;
+  }
+}
 
 /* ----------------------------------------------
  * Generated by Animista on 2022-10-10 19:1:1
@@ -205,28 +190,27 @@ span{
  * animation scale-in-center
  * ----------------------------------------
  */
- @-webkit-keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
   }
-  @keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
-  
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
