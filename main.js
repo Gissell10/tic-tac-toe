@@ -16,8 +16,6 @@
 
   let boxElements = document.querySelectorAll(".box");
   let board = document.getElementById("game");
-  let player1 = document.getElementById("player1");
-  let player2 = document.getElementById("player2");
   let theWinner = document.getElementById("theWinner");
   let winnerText = document.getElementById("winnerText");
   let restartElement = document.getElementById("restart");
@@ -53,15 +51,9 @@
       winnerText.innerHTML = "Draw!";
     } else {
       winnerText.innerHTML = `${currentPlayer} Wins!`;
-      // winplusOne();   // to add one to the winner
     }
     theWinner.classList.add("show");
   }
-
-  // function winplusOne(){
-  //     player1.innerText  += 1;
-  //     console.log(player1)
-  // }
 
   function isDraw() {
     if (boardCellValue.indexOf(null) === -1) {
