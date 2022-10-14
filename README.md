@@ -28,6 +28,11 @@ Tic-Tac-Toe is a simple and fun game for 2 players, Koala and Kangaroo. It is pl
 
 The images were taken from https://use.fontawesome.com/
 
+## special thanks
+
+Loden Gendun
+Joel Turnbull
+
 ## Badges
 
 I used the extension prettier to organize the code.
