@@ -1,5 +1,14 @@
 # This is a Tic Tac Toe
 
+Screen Shot 2022-12-20 at 11.32.14 am<img width="375" alt="image" src="https://user-images.githubusercontent.com/63778718/208554123-4fbfa43d-8f68-4e5a-9c9c-5196544899b1.png">
+
+
+
+
+
+
+
+
 ## Tic Tac Toe
 
 This game is develop to be player for tow person, is responsive and allow you to reset and play in a new board or finish the current game and play again.
