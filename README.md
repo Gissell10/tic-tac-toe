@@ -1,11 +1,7 @@
 # This is a Tic Tac Toe
 
-Screen Shot 2022-12-20 at 11.32.14 am<img width="375" alt="image" src="https://user-images.githubusercontent.com/63778718/208554123-4fbfa43d-8f68-4e5a-9c9c-5196544899b1.png">
 
-
-
-
-
+Screen Shot 2022-12-20 at 11.32.14 am<img width="375" alt="image" src="https://user-images.githubusercontent.com/63778718/208554204-1c4b8320-acfd-4357-80a6-7dd4d0274962.png">
 
 
 
